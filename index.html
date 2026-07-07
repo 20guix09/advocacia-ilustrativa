@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos Sampaio Advocacia | Advocacia e Consultoria Jurídica</title>
+  <meta name="description" content="Escritório de advocacia especializado em Direito Civil, Empresarial, Contratual e Propriedade Intelectual. Rigor técnico, ética e atendimento personalizado.">
+
+  <!-- Google Fonts: Playfair Display (títulos) + Inter (texto corrido) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#FAFAFA',
+            paper: '#F1EEE8',
+            ink: '#212529',
+            slate: '#4A5568',
+            accent: '#4A1521',
+            accentdeep: '#330F17',
+            line: '#DDD8CF',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <!-- Estilos customizados -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+
+<body class="bg-bg text-ink font-sans antialiased">
+
+  <!-- =====================================================================
+       CABEÇALHO
+       ===================================================================== -->
+  <header id="site-header" class="fixed top-0 inset-x-0 z-50">
+    <div class="max-w-7xl mx-auto h-full px-6 lg:px-10 flex items-center justify-between">
+
+      <!-- Logotipo -->
+      <a href="#inicio" class="flex items-center gap-3" aria-label="Carlos Sampaio Advocacia — página inicial">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" stroke="#4A1521" stroke-width="1"/>
+          <path d="M8 8H12V32H8V8Z" fill="#212529"/>
+          <path d="M28 8H32V32H28V8Z" fill="#212529"/>
+          <path d="M13 8L20 14L27 8" stroke="#212529" stroke-width="1.4" fill="none"/>
+          <path d="M13 32L20 26L27 32" stroke="#212529" stroke-width="1.4" fill="none"/>
+        </svg>
+        <span class="leading-tight">
+          <span class="block font-serif text-[1.05rem] tracking-wide text-ink">Carlos Sampaio</span>
+          <span class="block text-[0.62rem] tracking-[0.28em] uppercase text-slate">Advocacia &amp; Consultoria</span>
+        </span>
+      </a>
+
+      <!-- Navegação desktop -->
+      <nav class="hidden md:flex items-center gap-9 text-sm" aria-label="Navegação principal">
+        <a href="#inicio" class="nav-link" aria-current="true">Início</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#areas" class="nav-link">Áreas de Atuação</a>
+        <a href="#contato" class="nav-link">Contato</a>
+        <a href="#contato" class="btn-outline-sm">Agendar Consulta</a>
+      </nav>
+
+      <!-- Botão do menu mobile -->
+      <button id="menu-toggle" type="button" class="md:hidden text-ink" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu de navegação">
+        <i data-icon="menu" data-lucide="menu" class="w-6 h-6"></i>
+        <i data-icon="close" data-lucide="x" class="w-6 h-6 hidden"></i>
+      </button>
+    </div>
+
+    <!-- Painel do menu mobile -->
+    <nav id="mobile-menu" class="md:hidden absolute top-full inset-x-0 bg-bg border-b border-line px-6 py-6 flex flex-col gap-5 text-sm" aria-label="Navegação móvel">
+      <a href="#inicio" class="nav-link">Início</a>
+      <a href="#sobre" class="nav-link">Sobre</a>
+      <a href="#areas" class="nav-link">Áreas de Atuação</a>
+      <a href="#contato" class="nav-link">Contato</a>
+      <a href="#contato" class="btn-outline-sm self-start mt-2">Agendar Consulta</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================================================================
+         HERO
+         =================================================================== -->
+    <section id="inicio" class="relative pt-40 pb-24 lg:pt-48 lg:pb-32 px-6 lg:px-10">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-14 items-center">
+
+        <!-- Texto principal -->
+        <div class="lg:col-span-7">
+          <p class="text-xs tracking-[0.3em] uppercase text-accent mb-6">Advocacia e Consultoria Jurídica</p>
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.15] text-ink">
+            Segurança jurídica não é apenas um serviço.<br class="hidden lg:block">
+            É um compromisso permanente.
+          </h1>
+          <p class="mt-7 text-base lg:text-lg text-slate max-w-xl leading-relaxed">
+            Há mais de quinze anos, o escritório Carlos Sampaio Advocacia orienta pessoas e empresas
+            com rigor técnico e clareza, transformando questões jurídicas complexas em decisões
+            seguras e bem fundamentadas.
+          </p>
+          <div class="mt-10 flex flex-wrap items-center gap-5">
+            <a href="#contato" class="btn-primary">
+              Agendar Consulta
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="#sobre" class="btn-outline">
+              Conhecer o Escritório
+            </a>
+          </div>
+        </div>
+
+        <!-- Imagem de destaque com moldura de assinatura -->
+        <div class="lg:col-span-5">
+          <div class="doc-frame reveal">
+            <div class="doc-frame__inner corner-marks aspect-[4/5]">
+              <img
+                src="https://images.unsplash.com/photo-1761735486549-7a6a04e67061?auto=format&fit=crop&w=900&q=80"
+                alt="Sala de reuniões do escritório, com ambiente sóbrio e iluminação natural"
+                class="w-full h-full object-cover"
+                loading="eager"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Faixa de indicadores -->
+      <div class="max-w-7xl mx-auto mt-20 lg:mt-28 pt-10 border-t border-line reveal">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center sm:text-left">
+          <div class="sm:border-r sm:border-line sm:pr-8">
+            <p class="font-serif text-3xl text-ink">15+</p>
+            <p class="text-xs tracking-widest uppercase text-slate mt-2">Anos de atuação</p>
+          </div>
+          <div class="sm:border-r sm:border-line sm:pr-8">
+            <p class="font-serif text-3xl text-ink">4</p>
+            <p class="text-xs tracking-widest uppercase text-slate mt-2">Áreas de especialização</p>
+          </div>
+          <div class="sm:border-r sm:border-line sm:pr-8">
+            <p class="font-serif text-3xl text-ink">OAB/SP</p>
+            <p class="text-xs tracking-widest uppercase text-slate mt-2">Registro nº 123.456</p>
+          </div>
+          <div>
+            <p class="font-serif text-3xl text-ink">100%</p>
+            <p class="text-xs tracking-widest uppercase text-slate mt-2">Atendimento personalizado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SOBRE O ADVOGADO
+         =================================================================== -->
+    <section id="sobre" class="bg-paper px-6 lg:px-10 py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-start">
+
+        <!-- Retrato -->
+        <div class="lg:col-span-4 reveal">
+          <div class="doc-frame">
+            <div class="doc-frame__inner corner-marks aspect-[3/4]">
+              <img
+                src="https://images.unsplash.com/photo-1758518729058-b158e71c5a9b?auto=format&fit=crop&w=800&q=80"
+                alt="Retrato do Dr. Carlos Sampaio, advogado"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Biografia -->
+        <div class="lg:col-span-8 reveal">
+          <p class="text-xs tracking-[0.3em] uppercase text-accent mb-5">Sobre o Advogado</p>
+          <h2 class="font-serif text-3xl lg:text-4xl text-ink">Dr. Carlos Sampaio</h2>
+          <p class="text-slate mt-2">Advogado e Consultor Jurídico — OAB/SP nº 123.456</p>
+
+          <p class="mt-8 text-slate leading-relaxed max-w-2xl">
+            Com trajetória dedicada ao Direito Civil e Empresarial, o Dr. Carlos Sampaio construiu
+            sua atuação sobre três pilares: domínio técnico da legislação, conduta ética inegociável
+            e proximidade real com cada cliente. Essa combinação orienta cada parecer, contrato e
+            estratégia processual conduzidos pelo escritório.
+          </p>
+          <p class="mt-5 text-slate leading-relaxed max-w-2xl">
+            Sua prática parte de um princípio simples: o cliente deve compreender, em linguagem
+            clara, cada decisão jurídica que afeta seu patrimônio, sua empresa ou sua família.
+            Transparência não é um diferencial — é o ponto de partida.
+          </p>
+
+          <!-- Formação acadêmica -->
+          <div class="mt-10">
+            <p class="text-xs tracking-[0.25em] uppercase text-ink mb-4">Formação Acadêmica</p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 pb-3 border-b border-line">
+                <i data-lucide="graduation-cap" class="w-4 h-4 mt-0.5 text-accent shrink-0"></i>
+                <span class="text-slate text-sm">Bacharelado em Direito — Universidade de São Paulo (USP)</span>
+              </li>
+              <li class="flex items-start gap-3 pb-3 border-b border-line">
+                <i data-lucide="graduation-cap" class="w-4 h-4 mt-0.5 text-accent shrink-0"></i>
+                <span class="text-slate text-sm">Especialização em Direito Empresarial — Fundação Getulio Vargas (FGV)</span>
+              </li>
+              <li class="flex items-start gap-3 pb-3 border-b border-line">
+                <i data-lucide="graduation-cap" class="w-4 h-4 mt-0.5 text-accent shrink-0"></i>
+                <span class="text-slate text-sm">Mestrado em Direito Civil — Pontifícia Universidade Católica (PUC-SP)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="shield-check" class="w-4 h-4 mt-0.5 text-accent shrink-0"></i>
+                <span class="text-slate text-sm">Membro atuante da Ordem dos Advogados do Brasil, Seccional São Paulo</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="font-serif italic text-xl text-ink mt-10">Carlos Sampaio</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ÁREAS DE ATUAÇÃO
+         =================================================================== -->
+    <section id="areas" class="px-6 lg:px-10 py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-2xl reveal">
+          <p class="text-xs tracking-[0.3em] uppercase text-accent mb-5">Áreas de Atuação</p>
+          <h2 class="font-serif text-3xl lg:text-4xl text-ink">Orientação jurídica especializada, em cada etapa</h2>
+          <p class="mt-5 text-slate leading-relaxed">
+            Cada área de atuação é conduzida com o mesmo padrão de rigor técnico e atenção
+            individual, adaptando a estratégia jurídica às particularidades de cada caso.
+          </p>
+        </div>
+
+        <div class="mt-16 grid sm:grid-cols-2 gap-x-10 gap-y-14">
+
+          <div class="practice-card pt-8 reveal">
+            <i data-lucide="scale" class="w-6 h-6 text-accent"></i>
+            <h3 class="font-serif text-xl text-ink mt-5">Direito Civil</h3>
+            <p class="mt-3 text-slate text-sm leading-relaxed">
+              Condução de questões patrimoniais, familiares, sucessórias e de responsabilidade
+              civil, com foco na proteção dos interesses e do patrimônio do cliente.
+            </p>
+          </div>
+
+          <div class="practice-card pt-8 reveal">
+            <i data-lucide="building-2" class="w-6 h-6 text-accent"></i>
+            <h3 class="font-serif text-xl text-ink mt-5">Direito Empresarial</h3>
+            <p class="mt-3 text-slate text-sm leading-relaxed">
+              Assessoria societária, governança, operações de reestruturação e suporte jurídico
+              contínuo para empresas em todas as fases de maturidade.
+            </p>
+          </div>
+
+          <div class="practice-card pt-8 reveal">
+            <i data-lucide="file-text" class="w-6 h-6 text-accent"></i>
+            <h3 class="font-serif text-xl text-ink mt-5">Direito Contratual</h3>
+            <p class="mt-3 text-slate text-sm leading-relaxed">
+              Elaboração, revisão e negociação de contratos com precisão técnica, reduzindo
+              riscos e assegurando clareza nas obrigações de cada parte.
+            </p>
+          </div>
+
+          <div class="practice-card pt-8 reveal">
+            <i data-lucide="lightbulb" class="w-6 h-6 text-accent"></i>
+            <h3 class="font-serif text-xl text-ink mt-5">Propriedade Intelectual</h3>
+            <p class="mt-3 text-slate text-sm leading-relaxed">
+              Proteção de marcas, patentes e ativos intangíveis, com estratégias voltadas à
+              defesa da originalidade e do valor construído pelo cliente.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         DIFERENCIAIS / VALORES
+         =================================================================== -->
+    <section id="diferenciais" class="bg-ink text-bg px-6 lg:px-10 py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-2xl reveal">
+          <p class="text-xs tracking-[0.3em] uppercase text-white/50 mb-5">Diferenciais</p>
+          <h2 class="font-serif text-3xl lg:text-4xl">Princípios que orientam cada atendimento</h2>
+        </div>
+
+        <div class="mt-16 grid sm:grid-cols-3 gap-12 sm:gap-8">
+          <div class="sm:border-r sm:border-white/15 sm:pr-8 reveal">
+            <i data-lucide="eye" class="w-6 h-6 text-white/70"></i>
+            <h3 class="font-serif text-xl mt-5">Transparência</h3>
+            <p class="mt-3 text-white/65 text-sm leading-relaxed">
+              Comunicação direta sobre prazos, custos e possíveis desdobramentos de cada caso,
+              sem promessas que a lei não permite sustentar.
+            </p>
+          </div>
+          <div class="sm:border-r sm:border-white/15 sm:pr-8 reveal">
+            <i data-lucide="users" class="w-6 h-6 text-white/70"></i>
+            <h3 class="font-serif text-xl mt-5">Atendimento Personalizado</h3>
+            <p class="mt-3 text-white/65 text-sm leading-relaxed">
+              Cada cliente é acompanhado diretamente, com disponibilidade real para dúvidas e
+              decisões ao longo de todo o processo.
+            </p>
+          </div>
+          <div class="reveal">
+            <i data-lucide="award" class="w-6 h-6 text-white/70"></i>
+            <h3 class="font-serif text-xl mt-5">Rigor Técnico</h3>
+            <p class="mt-3 text-white/65 text-sm leading-relaxed">
+              Estudo aprofundado da legislação e da jurisprudência aplicável a cada caso, como
+              base de toda estratégia adotada.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         CONTATO
+         =================================================================== -->
+    <section id="contato" class="bg-paper px-6 lg:px-10 py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16">
+
+        <!-- Formulário -->
+        <div class="lg:col-span-7 reveal">
+          <p class="text-xs tracking-[0.3em] uppercase text-accent mb-5">Contato</p>
+          <h2 class="font-serif text-3xl lg:text-4xl text-ink">Agende uma consulta</h2>
+          <p class="mt-5 text-slate leading-relaxed max-w-lg">
+            Preencha o formulário abaixo com os detalhes do seu caso. Retornaremos o contato
+            em até vinte e quatro horas úteis.
+          </p>
+
+          <!-- Mensagem de sucesso (exibida após envio válido) -->
+          <div id="form-success" class="hidden mt-8 flex items-start gap-3 border-l-2 border-accent bg-bg px-5 py-4" role="status" aria-live="polite">
+            <i data-lucide="check-circle" class="w-5 h-5 text-accent shrink-0 mt-0.5"></i>
+            <p class="text-sm text-ink">
+              Mensagem enviada com sucesso. Nossa equipe entrará em contato em até vinte e
+              quatro horas úteis.
+            </p>
+          </div>
+
+          <form id="contact-form" class="mt-10 space-y-7" novalidate>
+            <div>
+              <label for="nome" class="block text-xs tracking-widest uppercase text-slate mb-2">Nome completo</label>
+              <input type="text" id="nome" name="nome" class="form-field" placeholder="Seu nome" autocomplete="name">
+              <p id="nome-error" class="field-error">Por favor, informe seu nome completo.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-7">
+              <div>
+                <label for="email" class="block text-xs tracking-widest uppercase text-slate mb-2">E-mail</label>
+                <input type="email" id="email" name="email" class="form-field" placeholder="seu@email.com" autocomplete="email">
+                <p id="email-error" class="field-error">Informe um e-mail válido.</p>
+              </div>
+              <div>
+                <label for="telefone" class="block text-xs tracking-widest uppercase text-slate mb-2">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" class="form-field" placeholder="(11) 90000-0000" autocomplete="tel">
+                <p id="telefone-error" class="field-error">Informe um telefone válido.</p>
+              </div>
+            </div>
+
+            <div>
+              <label for="mensagem" class="block text-xs tracking-widest uppercase text-slate mb-2">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="4" class="form-field resize-none" placeholder="Descreva brevemente o seu caso"></textarea>
+              <p id="mensagem-error" class="field-error">Descreva sua solicitação com ao menos 10 caracteres.</p>
+            </div>
+
+            <button type="submit" class="btn-primary w-full sm:w-auto">
+              Enviar Mensagem
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Informações de contato -->
+        <div class="lg:col-span-5 reveal">
+          <div class="doc-frame">
+            <div class="doc-frame__inner bg-bg p-8 lg:p-10">
+              <p class="font-serif text-xl text-ink">Carlos Sampaio Advocacia</p>
+              <p class="text-slate text-sm mt-1">Advocacia e Consultoria Jurídica</p>
+
+              <ul class="mt-8 space-y-6">
+                <li class="flex items-start gap-4">
+                  <i data-lucide="map-pin" class="w-5 h-5 text-accent shrink-0 mt-0.5"></i>
+                  <span class="text-sm text-slate leading-relaxed">
+                    Avenida Maringá, 1000 — Conjunto 1010<br>
+                    Centro, Londrina — PR<br>
+                    CEP 86000-000
+                  </span>
+                </li>
+                <li class="flex items-start gap-4">
+                  <i data-lucide="phone" class="w-5 h-5 text-accent shrink-0 mt-0.5"></i>
+                  <span class="text-sm text-slate">(43) 9999-9999</span>
+                </li>
+                <li class="flex items-start gap-4">
+                  <i data-lucide="mail" class="w-5 h-5 text-accent shrink-0 mt-0.5"></i>
+                  <span class="text-sm text-slate">contato@gmail.com.br</span>
+                </li>
+                <li class="flex items-start gap-4">
+                  <i data-lucide="clock" class="w-5 h-5 text-accent shrink-0 mt-0.5"></i>
+                  <span class="text-sm text-slate">Segunda a sexta-feira, das 9h às 18h</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       RODAPÉ
+       ===================================================================== -->
+  <footer class="bg-ink text-white/70 px-6 lg:px-10 pt-16 pb-8 border-t border-accent">
+    <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="1" y="1" width="38" height="38" stroke="#4A1521" stroke-width="1"/>
+            <path d="M8 8H12V32H8V8Z" fill="#FAFAFA"/>
+            <path d="M28 8H32V32H28V8Z" fill="#FAFAFA"/>
+            <path d="M13 8L20 14L27 8" stroke="#FAFAFA" stroke-width="1.4" fill="none"/>
+            <path d="M13 32L20 26L27 32" stroke="#FAFAFA" stroke-width="1.4" fill="none"/>
+          </svg>
+          <span class="font-serif text-base text-white">Carlos Sampaio</span>
+        </div>
+        <p class="mt-4 text-sm leading-relaxed max-w-xs">
+          Advocacia e Consultoria Jurídica conduzida com rigor técnico, ética e atendimento
+          próximo ao cliente.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-xs tracking-[0.25em] uppercase text-white/40 mb-5">Navegação</p>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#inicio" class="hover:text-white transition-colors">Início</a></li>
+          <li><a href="#sobre" class="hover:text-white transition-colors">Sobre</a></li>
+          <li><a href="#areas" class="hover:text-white transition-colors">Áreas de Atuação</a></li>
+          <li><a href="#contato" class="hover:text-white transition-colors">Contato</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-xs tracking-[0.25em] uppercase text-white/40 mb-5">Contato</p>
+        <ul class="space-y-3 text-sm">
+          <li>Avenida Maringá, 1000, Londrina — PR</li>
+          <li>(43) 9999-9999</li>
+          <li>contato@gmail.com.br</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-xs tracking-[0.25em] uppercase text-white/40 mb-5">Conformidade</p>
+        <p class="text-sm leading-relaxed">
+          Este escritório atua em conformidade com o Código de Ética e Disciplina da OAB.
+          Registro OAB/PR nº 123.456.
+        </p>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/40">
+      <p>&copy; <span id="current-year">2026</span> Carlos Sampaio Advocacia e Consultoria Jurídica. Todos os direitos reservados.<br> Desenvolvido por GM web.</p>
+      <p>Conteúdo institucional de caráter informativo e ilustrativo. Não constitui aconselhamento jurídico.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
